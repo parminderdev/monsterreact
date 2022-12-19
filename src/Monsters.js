@@ -29,7 +29,7 @@ render(){
     return(
 
         <div>
-        <input className="search-box" type="search" placeholder="Search Monster"
+        <input className="search-box" type="search" placeholder="Search-Monster"
         onChange={(event) => {
             console.log(event.target.value);
         
