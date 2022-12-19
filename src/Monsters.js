@@ -30,7 +30,10 @@ render(){
 
         <div>
         <input className="search-box" type="search" placeholder="Search Monster"
-        onChange={(event) => {console.log(event.target.value)}}  />
+        onChange={(event) => {
+            console.log(event.target.value);
+        
+        }}  />
             {
                 this.state.monsters.map(
                     (monster) => {
