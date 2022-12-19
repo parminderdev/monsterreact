@@ -32,7 +32,13 @@ render(){
         <input className="search-box" type="search" placeholder="Search-Monster"
         onChange={(event) => {
             console.log(event.target.value);
-        
+            const searchString = event.target.value.toLowerCase();
+            const filererMonster = this.state.monsters.filter((monster)=>{
+               return monster.name.toLowerCase().includes(searchString);
+            });
+        this.setState(() =>{
+            return {monsters: filererMonster};
+        })
         }}  />
             {
                 this.state.monsters.map(
